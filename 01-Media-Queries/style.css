@@ -1,0 +1,82 @@
+/* 
+
+Media Queries 
+
+Permiten aplicar estilos CSS específicos de acuerdo a las características del dispositivo. 
+
+Utilizan la regla @media para condicionar la aplicación de estos estilos y sigue la siguiente sintaxis: 
+
+    @media media-type conector (media-feature-rule) {
+    Reglas de CSS que se van a aplicar cuando se cumplan estas condiciones. 
+    }
+
+Media Type (Tipos de Medios)
+
+    * screen-> Pantallas de computadoras, tablets o de móviles. 
+    * speech-> Sitentizadores de voz. 
+    * print-> Para documentos impresos. Impresión de web. 
+    * all -> Todos los dispositivos. Valor por defecto. 
+
+Conectors (Conectores) 
+
+    * and-> y -> Se coloca entre el media-type y el media-feature. 
+    * or-> o -> Se usa una "," para separar media-features. 
+    * not-> negación. -> Se coloca antes del media-type 
+
+Media Features (Características del Medio)
+
+    * width-> Ancho de la ventana del navegador. 
+    * height-> Alto de la ventana del navegador. 
+    * min-width / max-width-> Ancho mínimo y máximo del navegador. 
+    * min-height / max-height-> Altura mínima y máxima del navegador.
+    * orientation-> Orientación del dispositivo: portrait o landscape.
+    * resolution-> Densidad de píxeles. 
+    * color-> Número de bits por color.
+
+*/  
+
+/*  Estilo incial de la web  */
+body {
+  background-color:cadetblue;
+} 
+
+h1 {
+  font-family: sans-serif;
+  font-size: 3rem;
+}
+
+/* Media Queries  */
+
+@media screen and (max-width: 1024px) {
+  body {
+    background-color: mistyrose;
+  }
+
+  h1 {
+    font-family: serif;
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-color:paleturquoise;
+  }
+
+  h1 {
+    font-family: Helvetica;
+    color: rosybrown;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    background-color:plum;
+  }
+
+  h1 {
+    font-family: cursive;
+    font-size: 1rem;
+    color:whitesmoke;
+  }
+}
